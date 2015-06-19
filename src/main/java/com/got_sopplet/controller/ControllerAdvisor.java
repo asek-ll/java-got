@@ -10,6 +10,6 @@ public class ControllerAdvisor
   @ExceptionHandler( NoHandlerFoundException.class )
   public String handle( Exception ex )
   {
-    return "redirect:/index.html";
+    return "redirect:/";
   }
 }
