@@ -7,14 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserController
-{
-  @Autowired
-  private UserService userService;
+public class UserController {
+    @Autowired
+    private UserService userService;
 
-  @RequestMapping( "/user" )
-  public User user()
-  {
-    return userService.getUser();
-  }
+    @RequestMapping("/user")
+    public User user() {
+        return userService.getCurrentUser();
+    }
 }

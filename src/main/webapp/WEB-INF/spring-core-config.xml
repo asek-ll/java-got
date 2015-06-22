@@ -14,7 +14,7 @@
 
   <context:component-scan base-package="com.got_sopplet"/>
 
-  <context:property-placeholder location="classpath:database.properties"/>
+  <context:property-placeholder location="file:#{ systemProperties['MONGO_PROPERTY_FILE'] }"/>
 
   <mongo:mongo host="${mongo.host}" port="${mongo.port}"/>
 

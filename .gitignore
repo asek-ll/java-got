@@ -1,0 +1,5 @@
+database.properties
+target
+.idea
+deployments
+*.iml
