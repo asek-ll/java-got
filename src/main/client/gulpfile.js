@@ -100,7 +100,7 @@ var getBootstrapStyles = function() {
   .pipe(gulp.dest(dist + '/styles'));
 };
 
-gulp.task('dev-html', ['clean'], function() {
+gulp.task('dev-build', ['clean'], function() {
 
   var isDev = true;
   var vendorStream = getVendorResources(isDev);
@@ -117,7 +117,7 @@ gulp.task('dev-html', ['clean'], function() {
   .pipe(gulp.dest(dist));
 });
 
-gulp.task('html', ['clean'], function() {
+gulp.task('build', ['clean'], function() {
 
   var isDev = false;
   var vendorStream = getVendorResources(isDev);
@@ -142,12 +142,12 @@ var rebuildHtml = function () {
   }
 
   isHtmlRebuiliding = true;
-  gulp.start('dev-html', function () {
+  gulp.start('dev-build', function () {
     isHtmlRebuiliding = false;
   });
 };
 
-gulp.task('watch', ['dev-html'], function() {
+gulp.task('watch', ['dev-build'], function() {
 
   watch(src.html, function() {
     rebuildHtml();
