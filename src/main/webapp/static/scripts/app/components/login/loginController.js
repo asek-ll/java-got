@@ -1,0 +1,12 @@
+angular.module('tg').controller('LoginCtrl', function($scope, AuthService, $location) {
+  return $scope.login = function(user) {
+    return AuthService.login(user).then(function() {
+      $scope.error = false;
+      return $location.path('/');
+    }, function() {
+      return $scope.error = true;
+    });
+  };
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvbG9naW4vbG9naW5Db250cm9sbGVyLmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLENBQUMsTUFBUixDQUFlLElBQWYsQ0FBb0IsQ0FBQyxVQUFyQixDQUFnQyxXQUFoQyxFQUE2QyxTQUFDLE1BQUQsRUFBUyxXQUFULEVBQXNCLFNBQXRCO1NBQzNDLE1BQU0sQ0FBQyxLQUFQLEdBQWUsU0FBQyxJQUFEO1dBQ2IsV0FBVyxDQUFDLEtBQVosQ0FBa0IsSUFBbEIsQ0FBdUIsQ0FBQyxJQUF4QixDQUE2QixTQUFBO01BQzNCLE1BQU0sQ0FBQyxLQUFQLEdBQWU7YUFDZixTQUFTLENBQUMsSUFBVixDQUFlLEdBQWY7SUFGMkIsQ0FBN0IsRUFHRSxTQUFBO2FBQ0EsTUFBTSxDQUFDLEtBQVAsR0FBZTtJQURmLENBSEY7RUFEYTtBQUQ0QixDQUE3QyIsImZpbGUiOiJjb21wb25lbnRzL2xvZ2luL2xvZ2luQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbImFuZ3VsYXIubW9kdWxlKCd0ZycpLmNvbnRyb2xsZXIgJ0xvZ2luQ3RybCcsICgkc2NvcGUsIEF1dGhTZXJ2aWNlLCAkbG9jYXRpb24pIC0+XHJcbiAgJHNjb3BlLmxvZ2luID0gKHVzZXIpIC0+XHJcbiAgICBBdXRoU2VydmljZS5sb2dpbih1c2VyKS50aGVuIC0+XHJcbiAgICAgICRzY29wZS5lcnJvciA9IGZhbHNlXHJcbiAgICAgICRsb2NhdGlvbi5wYXRoICcvJ1xyXG4gICAgLCAtPlxyXG4gICAgICAkc2NvcGUuZXJyb3IgPSB0cnVlXHJcbiJdfQ==

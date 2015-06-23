@@ -18,8 +18,10 @@
   <!--<property name="suffix" value=".jsp"/>-->
   <!--</bean>-->
 
-  <mvc:resources mapping="/resource/**" location="/resource/"/>
-  <mvc:resources mapping="/index.html" location="/index.html"/>
+  <mvc:resources mapping="/index.html" location="/static/index.html"/>
+  <mvc:resources mapping="/styles/**" location="/static/styles/"/>
+  <mvc:resources mapping="/scripts/**" location="/static/scripts/"/>
+  <mvc:resources mapping="/partials/**" location="/static/partials/"/>
 
   <mvc:annotation-driven/>
 </beans>
