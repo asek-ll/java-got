@@ -4,7 +4,7 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans
 		   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		   http://www.springframework.org/schema/security
-		   http://www.springframework.org/schema/security/spring-security.xsd">
+		   http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
     <http entry-point-ref="restAuthenticationEntryPoint">
         <form-login
@@ -12,6 +12,7 @@
                 authentication-failure-handler-ref="loginFormFailureHandler"
                 />
         <logout/>
+        <csrf disabled="true" />
     </http>
 
     <authentication-manager>

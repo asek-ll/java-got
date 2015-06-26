@@ -17,7 +17,7 @@
   <tbody>
     <tr ng-repeat="game in games">
       <td>
-        <a href="/game/{{ game._id }}" ng-bind="game.name"></a>
+        <a href="/game/{{ game.id }}" ng-bind="game.name"></a>
       </td>
       <td ng-bind="game.created | date:'medium'"></td>
       <td ng-bind="game.status"></td>

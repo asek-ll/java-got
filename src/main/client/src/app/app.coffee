@@ -14,6 +14,9 @@ angular.module 'tg', [
     }).when('/games/new', {
       templateUrl: 'views/game-form.tpl.html',
       controller: 'GameFormCtrl'
+    }).when('/game/:gameId', {
+      templateUrl: 'views/game-info.tpl.html',
+      controller: 'GameInfoCtrl'
     }).when('/me', {
       templateUrl: 'views/user.tpl.html',
       controller: 'UserCtrl'
